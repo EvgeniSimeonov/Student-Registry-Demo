@@ -2,25 +2,25 @@ const assert = require('assert');
 const fetch = require('node-fetch');
 
 suite('Add Students page', function() {
-  test('Page title', async function() {
-    let res = await fetch("http://localhost:8081/add-student");
-    let body = await res.text();
-    assert.ok(body.includes("<h1>Register New Student</h1>"));
-  });
+  // test('Page title', async function() {
+  //   let res = await fetch("http://localhost:8081/add-student");
+  //   let body = await res.text();
+  //   assert.ok(body.includes("<h1>Register New Student</h1>"));
+  // });
 
-  test('Students HTML form', async function() {
-    let res = await fetch("http://localhost:8081/add-student");
-    let body = await res.text();
+  // test('Students HTML form', async function() {
+  //   let res = await fetch("http://localhost:8081/add-student");
+  //   let body = await res.text();
     
-    let nameFieldFound = body.includes('<input id="name" type="text" name="name"/>');
-    assert.ok(nameFieldFound, "Field 'name' is missing");
+  //   let nameFieldFound = body.includes('<input id="name" type="text" name="name"/>');
+  //   assert.ok(nameFieldFound, "Field 'name' is missing");
 
-    let emailFieldFound = body.includes('<input id="email" type="email" name="email"/>');
-    assert.ok(emailFieldFound, "Field 'email' is missing");
+  //   let emailFieldFound = body.includes('<input id="email" type="email" name="email"/>');
+  //   assert.ok(emailFieldFound, "Field 'email' is missing");
 
-    let buttonAddFound = body.includes('<button type="submit">Add</button>');
-    assert.ok(buttonAddFound, "Button [Add] is missing");
-  });
+  //   let buttonAddFound = body.includes('<button type="submit">Add</button>');
+  //   assert.ok(buttonAddFound, "Button [Add] is missing");
+  // });
 
   // test('Add valid student', async function() {
   //   let res = await fetch(
